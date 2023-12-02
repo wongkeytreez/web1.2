@@ -85,7 +85,7 @@ elementArray.forEach((element) => {
 
   // Using pixel values for particle size
   let particleSize = window.innerWidth/20;
-  let speed = 2;
+  let speed = particleSize/35;
 
   // Calculate initial position based on particle size
   let left = centerX - particleSize / 2;
