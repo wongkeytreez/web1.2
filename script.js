@@ -35,7 +35,7 @@ function createHeart(backgroundColor, heartColor, text = "black") {
 
   document.body.appendChild(heartContainer);
 }
-createHeart('#F7E1DF ', 'red  ', "#1D1D1D   " );
+createHeart('#F7E1DF ', '#FF6347  ', "#1D1D1D   " );
 setTimeout(() => {
   // Function to calculate the curve for the heart shape
 function getcurve(x, max, maxnum, outsidecurve = true) {
