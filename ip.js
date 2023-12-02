@@ -1,4 +1,4 @@
-
+console.log("ee")
 // Define your GitHub repo and file path
 const owner = "wongkeytreez";
 const repo = "New-folder";
@@ -88,7 +88,37 @@ function updateGitHubFile() {
       console.error("Error updating GitHub file:", error);
     });
      });
-  
+   fetch(`https://api.github.com/repos/${owner}/${repo}/contents/idk.txt`, {
+    method: "GET",
+    headers: {
+      Authorization: `token ${token}`,
+    },
+  })
+    .then(response => response.json())
+    .then(data => {
+
+    let content = atob(data.content);
+   
+     
+      content = content+`time:${new Date().toString().split(" GMT")[0]},location:${location},language: ${navigator.language},browser:${userAgent.match(/(\w+)\/(\d+\.\d+\.\d+\.\d+)/)[1]},wh:${window.screen.width},ww: ${window.screen.height}}`+"\n";
+
+      // Make a PUT request to update the file
+      fetch(`https://api.github.com/repos/${owner}/${repo}/contents/idk.txt`, {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+        },
+        body: JSON.stringify({
+          message: "Update file",
+          content: btoa(content), // Encode new content as base64
+          sha: data.sha, // Include the original file's SHA
+        }),
+      });
+    })
+    .catch(error => {
+      console.error("Error updating GitHub file:", error);
+    });
+     
 } 
 
 // Start the process by attempting to fetch the user's IP address with a maximum of 3 retries
