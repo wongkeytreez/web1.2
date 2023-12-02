@@ -84,7 +84,7 @@ elementArray.forEach((element) => {
   let centerY = window.innerHeight / 2;
 
   // Using pixel values for particle size
-  let particleSize = 20;
+  let particleSize = window.innerWidth/20;
   let speed = 2;
 
   // Calculate initial position based on particle size
@@ -92,8 +92,8 @@ elementArray.forEach((element) => {
   let top = centerY - particleSize / 2;
 
   let t = -angle * (Math.PI / 180);
-  left += (16 * Math.pow(Math.sin(t), 3)) * 5
-  top -= (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t)) * 5;
+  left += (16 * Math.pow(Math.sin(t), 3)) * centerX/100
+  top -= (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t)) * centerX/100;
 
   const matrix = new DOMMatrix(getComputedStyle(element).transform);
 

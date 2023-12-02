@@ -78,8 +78,8 @@ body {
 }
 .particle-heart {
  position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 5%;
+  aspect-ratio: 1/1;
   z-index: 1;
   top: 50%;
   left: 50%;
