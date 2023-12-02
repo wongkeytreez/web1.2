@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+  background-color: #8DB580;
+}
+
+.heart-container {
+  position: absolute;
+  width: 30%;
+  top:50%;
+   aspect-ratio: 10/7; 
+}
+
+.heart {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 10/7;
+  animation: up 1.9s forwards, fadeInAndPulse 10s infinite 1.9s;
+  transform-origin: 50% 0%;
+  z-index: 2;
+}
+
+.heart > .left,
+.heart > .right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  top: 100%;
+}
+
+.heart > .left {
+  clip-path: polygon(99% -30%, 200% -30%, 200% 100%, 99% 100%);
+}
+
+.heart > .right {
+  right: 0%;
+  clip-path: polygon(-140% -20%, 0% -20%, 0% 100%, -140% 100%);
+}
+
+.heart > .left > div,
+.heart > .right > div {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 0 0;
+ 
+}
+
+.heart > .left > div {
+  right: 50%;
+  animation: leftH 2s forwards;
+  transform-origin: 100% 100%;
+}
+
+.heart > .right > div {
+  left: 50%;
+  animation: rightH 2s forwards;
+  transform-origin: 0% 100%;
+}
+
+.heart > h1 {
+  position: absolute;
+  top: 135%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-family: 'Arial', sans-serif;
+  opacity: 0;
+  animation: show 1s forwards 2s;
+}
+.particle-heart {
+ position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+
+}
+
+.particle-heart::before, .particle-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  aspect-ratio: 13/20;
+  border-radius: 50px 50px 0 0;
+  background: #FF6347;
+  transform: translate(-50%,-50%);
+}
+
+.particle-heart::before {
+  
+  left: 50%;
+  transform: translateY(-35%)rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.particle-heart::after {
+  right: 50%;
+  transform:  translateY(-35%)rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+
+@keyframes rightH {
+  to {
+    transform: translateX(-50%) rotate(-50deg);
+  }
+}
+
+@keyframes leftH {
+  to {
+    transform: translateX(50%) rotate(50deg);
+  }
+}
+
+@keyframes up {
+  to {
+    transform: translateY(-230%);
+  }
+}
+
+@keyframes fadeInAndPulse {
+  0%, 100% {
+    opacity: 1;
+    scale: 1;
+  }
+  50% {
+    /* opacity: 0.8; */
+    scale: 1.05;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}

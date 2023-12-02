@@ -1,0 +1,40 @@
+Classic Romantic:
+
+Background: #F7E1DF (Light Peach)
+Heart: #E84A5F (Pastel Red)
+Text: #1D1D1D (Black)
+Elegant and Timeless:
+
+Background: #EAE7DC (Light Ivory)
+Heart: #C0C0C0 (Silver)
+Text: #333333 (Dark Gray)
+Vibrant and Playful:
+
+Background: #FFD700 (Gold)
+Heart: #FF69B4 (Hot Pink)
+Text: #FFFFFF (White)
+Nature-inspired:
+
+Background: #8DB580 (Soft Green)
+Heart: #FF6347 (Tomato Red)
+Text: #2E2E2E (Charcoal)
+Oceanic Serenity:
+
+Background: #87CEEB (Sky Blue)
+Heart: #FFA07A (Light Salmon)
+Text: #FFFFFF (White)
+Mystical Night:
+
+Background: #211E2D (Dark Blue)
+Heart: #B22222 (Fire Brick)
+Text: #FFFFFF (White)
+Warm and Cozy:
+
+Background: #F5E1DA (Pale Chestnut)
+Heart: #FF7F50 (Coral)
+Text: #2F4F4F (Dark Slate Gray)
+Sunset Dream:
+
+Background: #FFD700 (Gold)
+Heart: #FF6347 (Tomato Red)
+Text: #FFD700 (Gold)
