@@ -23,7 +23,7 @@ function createHeart(backgroundColor, heartColor, text = "black") {
   heartContainer.appendChild(heart);
 
   const textElement = document.createElement('h1');
-  textElement.textContent = "i love you more boom"; // Set the text content
+  textElement.textContent = "i love you more boom\n i win"; // Set the text content
    textElement.style.color = text; // Set the text color
 //   textElement.style.fontSize = '1.5rem'; // Set the font size
 //   textElement.style.fontFamily = 'Arial, sans-serif'; // Set the font family
